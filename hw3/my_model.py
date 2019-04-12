@@ -72,7 +72,7 @@ def build_model():
 if __name__ == '__main__':
 	model = build_model()
 	model.summary()
-	plot_model(model,
-			   to_file = './hw3_model/model.png',
-			   show_shapes = True,
-			   show_layer_names = False)
+	# plot_model(model,
+	# 		   to_file = './hw3_model/model.png',
+	# 		   show_shapes = True,
+	# 		   show_layer_names = False)
