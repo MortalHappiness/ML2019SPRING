@@ -12,7 +12,7 @@ from my_model import CompressedModel
 # ======================================
 
 def main(script, train_data_path):
-	x_train, y_train = load_data.load_train_data(train_data_path) # len: 28709
+	x_data, y_data = load_data.load_train_data(train_data_path) # len: 28709
 
 	train_idx = np.arange(len(x_data)) < 27000
 	test_idx = np.logical_not(train_idx)
