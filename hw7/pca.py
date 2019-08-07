@@ -11,10 +11,10 @@ from skimage.io import imread, imsave
 # =====================================
 
 def process(M):
-	ans = M - np.min(M)
-	ans = ans/np.max(ans)
-	ans = (ans * 255).astype(np.uint8)
-	return ans
+    ans = M - np.min(M)
+    ans = ans/np.max(ans)
+    ans = (ans * 255).astype(np.uint8)
+    return ans
 
 #======================================
 
@@ -31,8 +31,8 @@ t = time.perf_counter()
 # load images
 img_data = []
 for i in range(415):
-	img = imread(os.path.join(img_folder, str(i) + '.jpg'))
-	img_data.append(img.ravel())
+    img = imread(os.path.join(img_folder, str(i) + '.jpg'))
+    img_data.append(img.ravel())
 
 img_data = np.array(img_data).astype('float32')
 
@@ -50,18 +50,18 @@ print('Solving svd takes %.3f seconds.' % (t1 - t0))
 # =====================================
 
 def reconstruct(img_file):
-	# Load image & Normalize
-	img = imread(os.path.join(img_folder, img_file))  
-	X = img.flatten().astype('float32')
-	X -= mean
-	
-	# Compression
-	weight = X.dot(u)
-	
-	# Reconstruction
-	recon = process(weight[:nb_pc].dot(u.T[:nb_pc]) + mean)
+    # Load image & Normalize
+    img = imread(os.path.join(img_folder, img_file))  
+    X = img.flatten().astype('float32')
+    X -= mean
+    
+    # Compression
+    weight = X.dot(u)
+    
+    # Reconstruction
+    recon = process(weight[:nb_pc].dot(u.T[:nb_pc]) + mean)
 
-	return recon
+    return recon
 
 # ======================================
 
@@ -84,17 +84,17 @@ print('Executing time: %.3f seconds.' % t)
 
 # # report problem 1.b
 # for x in range(5):
-# 	eigenface = process(u[:, x])
-# 	imsave('./pca_report/%d_eigenface.jpg' % x, eigenface.reshape(image_shape))
+#   eigenface = process(u[:, x])
+#   imsave('./pca_report/%d_eigenface.jpg' % x, eigenface.reshape(image_shape))
 
 # # report problem 1.c
 # test_images = [5, 13, 15, 60, 70]
 # for i in range(len(test_images)):
-# 	num = test_images[i]
-# 	recon = reconstruct('%d.jpg' % num)
-# 	imsave('./pca_report/%d_recon.jpg' % num, recon.reshape(image_shape))
+#   num = test_images[i]
+#   recon = reconstruct('%d.jpg' % num)
+#   imsave('./pca_report/%d_recon.jpg' % num, recon.reshape(image_shape))
 
 # # report problem 1.d
 # for i in range(5):
-# 	number = s[i] * 100 / sum(s)
-# 	print(number)
+#   number = s[i] * 100 / sum(s)
+#   print(number)
