@@ -11,7 +11,7 @@ Lecturer: Prof. [Hung-Yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/index.html)
 
 + hw3: **Image Sentiment Classification**. [[link]](https://ntumlta2019.github.io/ml-web-hw3/) [[**Ranked 19th / 147**]](https://www.kaggle.com/c/ml2019spring-hw3)
 
-+ hw4: **Explain your model**. [[link]](https://ntumlta2019.github.io/ml-web-hw4/) [**This homework has no ranking**]
++ hw4: **Explain your model**. [[link]](https://ntumlta2019.github.io/ml-web-hw4/) [**This homework has no ranking.**]
 
 + hw5: **Attack**. [[link]](https://docs.google.com/presentation/d/1RdBdCspgjXMnH3qzTS_m4RoQ0sT67VXoT-Oj7MERopA/edit?fbclid=IwAR3n_oSQjUgM9mEoYjAxqSuTJM6iwUq4X0KqanSnIE39gESKWm0j_21hZ-0#slide=id.p) [**Ranked 1st, the website has been removed.**]
 
